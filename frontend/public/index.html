@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= import.meta.env.VUE_APP_TITLE || '台账管理系统' %></title>
+    <style>
+      /* 初始加载样式 */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #409eff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>很抱歉，台账管理系统需要启用 JavaScript 才能正常工作。请启用 JavaScript 后刷新页面。</strong>
+    </noscript>
+    
+    <!-- 初始加载动画 -->
+    <div id="loading">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Vue应用挂载点 -->
+    <div id="app"></div>
+    
+    <script>
+      // 应用加载完成后移除loading动画
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.display = 'none';
+          }
+        }, 300);
+      });
+    </script>
+  </body>
+</html>

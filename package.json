@@ -1,0 +1,31 @@
+{
+  "name": "ledger-management-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+      "@element-plus/icons-vue": "^2.3.1",
+      "axios": "^1.6.7",
+      "core-js": "^3.36.0",
+      "element-plus": "^2.5.6",
+      "lodash": "^4.17.21",
+      "pinia": "^2.1.7",
+      "vue": "^3.4.19",
+      "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+      "@babel/core": "^7.24.0",
+      "@babel/eslint-parser": "^7.23.10",
+      "@babel/preset-env": "^7.24.0",
+      "@vue/cli-plugin-babel": "~5.0.8",
+      "@vue/cli-plugin-eslint": "~5.0.8",
+      "@vue/cli-plugin-router": "~5.0.8",
+      "@vue/cli-service": "~5.0.8",
+      "eslint": "^8.57.0",
+      "eslint-plugin-vue": "^9.22.0"
+  }
+}
